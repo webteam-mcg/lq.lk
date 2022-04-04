@@ -3,7 +3,7 @@
 <h1 align="center"> Lovers Quarrel 2022 </h1>
 <p align='center'><img src='https://cdn.discordapp.com/attachments/939201909842128956/960620562756026388/wtlogo.png' width='55%'>
 
-<p align='center'><h1 align='center'>Hola Amigos,<h4 style='font-style:italic'>
+<p align='center'><h1 align='center'>Hi There!<h4 style='font-style:italic'>
 This is the official repo of the source codes of the 2022 lovers quarrel website </h4> </h1></p>
  <br>
 
