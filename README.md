@@ -1,4 +1,4 @@
-<img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' width='10%' align='left'>
+
 
 <h1 align="center"> Lovers Quarrel 2022 </h1>
 <p align='center'><img src='https://cdn.discordapp.com/attachments/939201909842128956/960620562756026388/wtlogo.png' width='55%'>
