@@ -21,7 +21,7 @@ This is the official repo of the source codes of the 2022 lovers quarrel website
 <hr>
 
 ### :star:contributors
-<a href="https://github.com/webteam-mcg/lq.lk/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Uniq-dev/hacktober2021" />
+
+  <img src="https://cdn.discordapp.com/attachments/939201909842128956/960621749043626004/Group_15.png" />
 </a>
 
