@@ -24,4 +24,3 @@ This is the official repo of the source codes of the 2022 lovers quarrel website
 
   <img src="https://cdn.discordapp.com/attachments/939201909842128956/960621749043626004/Group_15.png" />
 </a>
-
