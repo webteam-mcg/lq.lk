@@ -119,6 +119,8 @@ Let the battle begin!">
 
                                 <li><a href="#section-sponsors">Sponsors<span></span></a></li>
                                 <li><a href="#section-register">Get Updated<span></span></a></li>
+
+                                <li><a href="#live"><button class="button">Live</button><span></span></a></li>
                             </ul>
                         </nav>
 
@@ -129,6 +131,44 @@ Let the battle begin!">
 
                 </div>
             </div>
+            <style>
+                .button {
+                    position: relative;
+                    background-color: #ff0000;
+                    border: none;
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    padding: 0px;
+                    width: 100px;
+                    text-align: center;
+                    -webkit-transition-duration: 0.4s;
+                    /* Safari */
+                    transition-duration: 0.4s;
+                    text-decoration: none;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                
+                .button:after {
+                    content: ":)";
+                    background: #ff0000;
+                    display: block;
+                    position: absolute;
+                    padding-top: 300%;
+                    padding-left: 350%;
+                    margin-left: -20px!important;
+                    margin-top: -120%;
+                    opacity: 0;
+                    transition: all 0.8s
+                }
+                
+                .button:active:after {
+                    padding: 0;
+                    margin: 0;
+                    opacity: 1;
+                    transition: 0s
+                }
+            </style>
         </header>
         <!-- header close -->
 
@@ -173,10 +213,10 @@ Let the battle begin!">
                         </div>
 
 
-                        <div class="tp-caption tp-static-layer" data-x="['center','center','center','center']" data-hoffset="['0']" data-y="['top','top','top','top']" data-voffset="['506']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
-                            data-responsive_offset="on" data-responsive="off" data-startslide="0" data-endslide="3" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(255, 255, 255, 0.15);bw:2px 2px 2px 2px;"}]'
+                        <div class="tp-caption tp-static-layer" data-x="['center','center','center','center']" data-hoffset="['0']" data-y="['top','top','top','top']" data-voffset="['506']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on"
+                            data-responsive="off" data-startslide="0" data-endslide="3" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(255, 255, 255, 0.15);bw:2px 2px 2px 2px;"}]'
                             data-textAlign="['center','center','center','center']" data-paddingtop="[12,12,12,12]" data-paddingright="[20,20,20,20]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[20,20,20,20]">
-                            <a href="https://lq.lk/#live" class="btn-custom text-white scroll-to" target="_blank">Watch Live!</a>
+                            <a href="#live" class="btn-custom text-white scroll-to" target="_blank">Watch Live!</a>
                         </div>
 
                         <div class="tp-caption tp-static-layer" data-x="['center','center','center','center']" data-hoffset="['0']" data-y="['top','top','top','top']" data-voffset="['506']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
