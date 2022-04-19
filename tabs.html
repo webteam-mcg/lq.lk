@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/jpreloader.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/plugin.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.theme.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css">
+
+    <!-- custom background -->
+    <link rel="stylesheet" href="css/bg.css" type="text/css">
+
+    <!-- color scheme -->
+    <link rel="stylesheet" href="css/colors/magenta.css" type="text/css" id="colors">
+    <link rel="stylesheet" href="css/color.css" type="text/css">
+
+    <!-- load fonts -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="fonts/et-line-font/style.css" type="text/css">
+
+    <!-- RS5.0 Stylesheet -->
+    <link rel="stylesheet" href="revolution/css/settings.css" type="text/css">
+    <link rel="stylesheet" href="revolution/css/layers.css" type="text/css">
+    <link rel="stylesheet" href="revolution/css/navigation.css" type="text/css">
+    <link rel="stylesheet" href="css/rev-settings.css" type="text/css">
+
+    <!-- custom font -->
+    <link rel="stylesheet" href="css/font-style.css" type="text/css">
+
+
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "e77e3adf-4776-4973-8be0-1dcd0976f6c9",
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <section>
+        <div class="wm wm-border dark wow fadeInDown ">live</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
+                    <h1>LIVE!</h1>
+                    <div class="separator"><span><i class="fa fa-square"></i></span></div>
+                    <div class="spacer-single"></div>
+                </div>
+            </div>
+            <center>
+                <p id="live">Click on the below banner to watch the live webcast of the Lovers' Quarrel.</p>
+            </center>
+        </div>
+        <div class="wrap-element">
+            <iframe class="wrapped-iframe" src="https://www.youtube.com/embed/DNy6cKFaeVw?autoplay=1" allow="encrypted-media autoplay" allowfullscreen frameborder="0"></iframe>
+
+        </div>
+
+    </section>
+
+    <!-- scorecard section begin -->
+
+    <section id="full-scorecard" class="cool_facts_area clearfix">
+
+        <div class="wm wm-border dark wow fadeInDown ">scores</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
+                    <h1>Score Card</h1>
+                    <div class="separator"><span><i class="fa fa-square"></i></span></div>
+                    <div class="spacer-single"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 col-lg-3">
+                    <div class="single-cool-fact d-flex justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="images-event\logo\mcg.png" width="50%" height="50%">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 text-center col-lg-6" data-wow-delay="0.6s">
+                    <div class="service-item" id="mainScore">
+                        <a id="Batting" class="page-scroll" style="color: gold;">{{ msg }}</a>
+                        <h1 class="mainScore"><span id="score">{{ score }}</span>/<span id="wickets">{{ wickets }}</span></h1>
+                        <h2><span class="mainOvers" id="Overs">{{ overs }}<span id="overs"></span> OVERS</h2>
+                        <p id="MatchStatus"></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 col-lg-3">
+                    <div class="single-cool-fact d-flex justify-content-center wow fadeInUp" data-wow-delay="0.8s">
+                        <img src="images-event\logo\rcg.png" width="50%" height="50%">
+                    </div>
+                </div>
+            </div>
+
+            <div id="scorecard" data-speed="10" data-type="background" style="padding-top: 50px; padding-bottom: 50px; background-position: 100% -429.8px;">
+                <div class="row">
+                    <div class="align-self-center col-md-8 offset-md-2 section-heading2 animated fadeInUp visible" style="text-align:center" data-animation="fadeInUp" data-animation-delay="0">
+                        <h2 class="lq-head">Lovers Quarrel 2022</h2>
+                        <h1>Full Scorecard</h1>
+                        <div class="separator"><span><i class="fa fa-square"></i></span></div>
+                        <p class="line">&nbsp;</p>
+                        <div class="quotes-p fullscore">
+                            <div class="items" v-for="(inning, index) in innings">
+                                <div class="name">{{ inning.displayName }}</div>
+                                <div class="text table-responsive">
+                                    <batting-card v-bind:inning="inning" v-bind:batting="battingCard" v-bind:innings="inningCard"></batting-card>
+                                    <bowling-card v-bind:inning="inning" v-bind:bowling="bowlingCard"></bowling-card>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <div class="container">
+        <h2>Dynamic Tabs</h2>
+        <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+            <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+            <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+            <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jpreLoader.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.scrollto.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/video.resize.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+
+    <!-- RS5.0 Core JS Files -->
+    <script src="revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script src="revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+
+    <!-- RS5.0 Extensions Files -->
+    <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            // revolution slider
+            jQuery("#slider-revolution").revolution({
+                sliderType: "standard",
+                sliderLayout: "fullwidth",
+                delay: 5000,
+                navigation: {
+                    arrows: {
+                        enable: true
+                    },
+                    bullets: {
+                        enable: false,
+                        style: 'hermes'
+                    },
+
+                },
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+                },
+                spinner: "off",
+                gridwidth: 1140,
+                gridheight: 700,
+                disableProgressBar: "on"
+            });
+        });
+    </script>
+
+    <script>
+        $(window).on("load", function() {
+            $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({
+                default_offset_pct: 0.7
+            });
+            $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({
+                default_offset_pct: 0.3,
+                orientation: 'vertical'
+            });
+        });
+    </script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB_fCrqzAGkDkAYDtdtERw_IMwoCgmkrJQ",
+            authDomain: "lqlk-5370b.firebaseapp.com",
+            databaseURL: "https://lqlk-5370b.firebaseio.com",
+            projectId: "lqlk-5370b",
+            storageBucket: "lqlk-5370b.appspot.com",
+            messagingSenderId: "612878491224",
+            appId: "1:612878491224:web:be9732520ddf14b97c742d",
+            measurementId: "G-0QQYMZPR82"
+        };
+        // Initialize Firebase
+        var app = firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore(app);
+
+        var mainRef = db.collection('main').doc('live');
+        var streamRef = db.collection('main').doc('config');
+        var battingCardRef = db.collection('batting').orderBy('timestamp', 'asc');
+        var bowlingCardRef = db.collection('bowling').orderBy('timestamp', 'asc');
+        var inningRef = db.collection('innings');
+
+        new Vue({
+
+            el: "#live",
+
+            data: {
+                url: null
+            },
+
+            created() {
+
+                // streamRef.get().then(doc=>{
+                //     this.url = doc.data().youtubelink;
+                // })
+            }
+        });
+
+        new Vue({
+
+            el: "#scorecard",
+
+            data: {
+                innings: [],
+                battingCard: [],
+                inningCard: [],
+                bowlingCard: []
+            },
+
+            created() {
+                streamRef
+                    .get()
+                    .then(doc => {
+                        this.innings = doc.data().inningOrder
+                    })
+
+                battingCardRef
+                    .get()
+                    .then(querySnapshot => {
+                        querySnapshot.forEach(doc => {
+                            this.battingCard.push(doc.data())
+                        });
+                    })
+
+                inningRef
+                    .get()
+                    .then(querySnapshot => {
+                        querySnapshot.forEach(doc => {
+                            this.inningCard.push(doc.data())
+                        })
+                    });
+
+                bowlingCardRef
+                    .get()
+                    .then(querySnapshot => {
+                        querySnapshot.forEach(doc => {
+                            this.bowlingCard.push(doc.data())
+                        })
+                    });
+            }
+        })
+
+        new Vue({
+
+            el: "#mainScore",
+
+            data: {
+                msg: null,
+                score: null,
+                overs: null,
+                wickets: null
+            },
+
+            created() {
+
+                mainRef.onSnapshot(doc => {
+                    this.msg = doc.data().message;
+                    this.score = doc.data().score;
+                    var balls = doc.data().balls;
+                    this.overs = Math.floor(balls / 6) + (balls % 6) / 10;
+                    this.wickets = doc.data().wickets;
+                })
+            }
+        });
+
+        Vue.component('batting-card', {
+
+            props: ['inning', 'batting', 'innings'],
+
+            computed: {
+                battingCard: function() {
+
+                    var filter = {
+                        team: this.inning.team,
+                        inning: this.inning.inning
+                    }
+
+                    var players = this.batting.filter(function(player) {
+                        for (var key in filter) {
+                            if (player[key] === undefined || player[key] != filter[key])
+                                return false;
+                        }
+                        return true
+                    })
+                    return players;
+                },
+
+                currentInning: function() {
+
+                    var filter = {
+                        team: this.inning.team,
+                        inning: this.inning.inning
+                    }
+
+                    var currrentInning = this.innings.filter(function(inning) {
+                        for (var key in filter) {
+                            if (inning[key] === undefined || inning[key] != filter[key])
+                                return false;
+                        }
+                        return true
+                    })
+                    return currrentInning;
+                }
+            },
+
+            template: `
+        <table class="table text-center">
+            <thead>
+                <tr align="center">
+                    <th>Batsman</th>
+                    <th style="text-align:center;" width="12%">Runs</th>
+                    <th style="text-align:center;" width="12%">Balls</th>
+                    <th style="text-align:center;" width="8%">4s</th>
+                    <th style="text-align:center;" width="8%">6s</th>
+                    <th style="text-align:center;" width="8%">S/R</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  v-for="(player, index) in battingCard">
+                    <td style="text-align:left;padding-bottom:3px;padding-top:3px;">{{ player.name }}<br><span style="font-size: 12px;padding-top: 10px;font-style: italic;">{{ player.status }}</span></td>
+                    <td>{{ player.score }}</td>
+                    <td>{{ player.balls }}</td>
+                    <td>{{ player.four }}</td>
+                    <td>{{ player.six }}</td>
+                    <td v-if="player.balls !== 0">{{ ((player.score*100)/player.balls).toFixed(2) }}</td>
+                    <td v-else>0</td>
+                </tr>
+                
+                <tr v-for="(inning, index) in currentInning">
+                        <td style="text-align:left;" colspan="9">
+                            Extras : {{inning.extra.total}} (
+                            <span v-if="inning.extra.b !== 0"> b {{inning.extra.b}}</span>
+                            <span v-if="inning.extra.lb !== 0"> lb {{inning.extra.lb}}</span>
+                            <span v-if="inning.extra.nb !== 0"> nb {{inning.extra.nb}}</span>
+                            <span v-if="inning.extra.wd !== 0"> wd {{inning.extra.wd}}</span> )
+                        </td>
+                </tr>
+                <tr v-for="(inning, index) in currentInning">
+                    <td style="text-align:left;" colspan="9">Total : {{inning.score}}</td>
+                </tr>
+            </tbody>
+        </table>
+        `
+        });
+
+
+        Vue.component('bowling-card', {
+
+            props: ['inning', 'bowling'],
+
+            computed: {
+                bowlingCard: function() {
+
+                    var filter = {
+                        team: this.inning.team,
+                        inning: this.inning.inning
+                    }
+
+                    var players = this.bowling.filter(function(player) {
+                        for (var key in filter) {
+                            if (player[key] === undefined || player[key] != filter[key])
+                                return false;
+                        }
+                        return true
+                    })
+                    return players;
+                },
+            },
+
+            template: `
+        <div class="text table-responsive score-table">
+          <table class="table text-center score-table">
+              <thead>
+                  <tr align="center">
+                      <th>Bowler</th>
+                      <th style="text-align:center;" width="12%">Overs</th>
+                      <th style="text-align:center;" width="12%">Runs</th>
+                      <th style="text-align:center;" width="12%">Maidens</th>
+                      <th style="text-align:center;" width="12%">Wickets</th>
+                      <th style="text-align:center;" width="8%">Econ</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr v-for="(player, index) in bowlingCard">
+                      <td style="text-align:left;">{{ player.name }} </td>
+                      <td>{{ Math.floor(player.balls/6)+(player.balls%6)/10 }}</td>
+                      <td>{{ player.score }}</td>
+                      <td>{{ player.maiden }}</td>
+                      <td>{{ player.wickets }}</td>
+                      <td v-if="player.balls !== 0">{{ (player.score/(Math.floor(player.balls/6)+(player.balls%6)/10)).toFixed(2)  }}</td>
+                      <td v-else>0</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+        `
+        })
+    </script>
+    <script>
+        document.getElementsByClassName('sk_branding')[0].style.visibility = 'hidden';
+    </script>
+</body>
+
+</html>
